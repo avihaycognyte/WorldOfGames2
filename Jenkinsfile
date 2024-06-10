@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('your-dockerhub-credentials-id') // Set up your DockerHub credentials in Jenkins
+    }
+
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git url: 'https://github.com/avihaycognyte/WorldOfGames2.git', branch: 'master'
             }
         }
 
@@ -19,9 +23,9 @@ pipeline {
         stage('Run') {
             steps {
                 script {
-                    docker.image('flask-scores-app').withRun('-p 8777:5000 -v ${WORKSPACE}/Scores.txt:/Scores.txt') { c ->
-                        sh 'sleep 10'  // Wait for the service to start
-                    }
+                    def flaskApp = docker.image('flask-scores-app')
+                    flaskApp.run('-p 8777:5000 -v ${WORKSPACE}/Scores.txt:/Scores.txt')
+                    sleep 10 // Wait for the service to start
                 }
             }
         }
@@ -37,11 +41,13 @@ pipeline {
             }
         }
 
-        stage('Finalize') {
+        stage('Push to DockerHub') {
             steps {
                 script {
-                    def img = docker.image('flask-scores-app')
-                    img.push('your-dockerhub-username/flask-scores-app:latest')
+                    docker.withRegistry('https://index.docker.io/v1/', 'DOCKERHUB_CREDENTIALS') {
+                        def flaskApp = docker.image('flask-scores-app')
+                        flaskApp.push('your-dockerhub-username/flask-scores-app:latest')
+                    }
                 }
             }
         }
@@ -50,10 +56,12 @@ pipeline {
     post {
         always {
             script {
-                docker.image('flask-scores-app').withRun() { c ->
-                    sh "docker stop ${c.id}"
-                }
+                sh "docker ps -q --filter 'ancestor=flask-scores-app' | xargs -r docker stop"
+                sh "docker ps -a -q --filter 'ancestor=flask-scores-app' | xargs -r docker rm"
             }
+        }
+        cleanup {
+            cleanWs()
         }
     }
 }
