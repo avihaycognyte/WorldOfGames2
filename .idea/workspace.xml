@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="added setup docker stage" />
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="removed sudo command">
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +104,7 @@
       <workItem from="1718269198543" duration="35000" />
       <workItem from="1718269258363" duration="1288000" />
       <workItem from="1718529774309" duration="1240000" />
-      <workItem from="1718706596811" duration="11912000" />
+      <workItem from="1718706596811" duration="12308000" />
     </task>
     <task id="LOCAL-00001" summary="3rd commit from today">
       <option name="closed" value="true" />
@@ -280,7 +282,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718724063101</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="removed su command">
+      <option name="closed" value="true" />
+      <created>1718724166652</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1718724166652</updated>
+    </task>
+    <task id="LOCAL-00024" summary="removed sudo command">
+      <option name="closed" value="true" />
+      <created>1718724187030</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1718724187030</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +337,9 @@
     <MESSAGE value="hudson.FilePath fix" />
     <MESSAGE value="fix comparison with SImantov code" />
     <MESSAGE value="added setup docker stage" />
-    <option name="LAST_COMMIT_MESSAGE" value="added setup docker stage" />
+    <MESSAGE value="removed su command" />
+    <MESSAGE value="removed sudo command" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed sudo command" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

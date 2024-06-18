@@ -11,12 +11,12 @@ pipeline {
                                 echo "Docker is not installed. Installing Docker..."
                                 if [ -x "$(command -v apt-get)" ]; then
                                     apt-get update || true
-                                    apt-get install -y docker.io
+                                    apt-get install -y docker.io || true
                                 elif [ -x "$(command -v yum)" ]; then
                                     yum update -y
-                                    yum install -y docker
-                                    systemctl start docker
-                                    systemctl enable docker
+                                    yum install -y docker || true
+                                    systemctl start docker || true
+                                    systemctl enable docker || true
                                 else
                                     echo "Package manager not supported. Please install Docker manually."
                                     exit 1
