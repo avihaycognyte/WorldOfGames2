@@ -25,7 +25,6 @@ pipeline {
                 sh '''
                     docker run --name flask-scores-app --detach --rm --publish 8777:5000 \
                     -v $WORKSPACE/Scores.txt:/app/Scores.txt \
-                    -e GAME_CHOICE=1 -e GAME_DIFFICULTY=2 \
                     flask-scores-app sh -c '
                     if [ ! -f /app/Scores.txt ]; then
                         echo 0 > /app/Scores.txt;
@@ -34,13 +33,6 @@ pipeline {
                 '''
                 // Wait for the container to start
                 sleep 10
-            }
-        }
-
-        stage('Run Game') {
-            steps {
-                sh 'echo Running Game...'
-                sh 'docker exec flask-scores-app python3 MainGame.py'
             }
         }
 
