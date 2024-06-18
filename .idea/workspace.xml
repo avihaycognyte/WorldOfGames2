@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="With these changes, the pipeline will:&#10;&#10;Checkout the repository.&#10;Build the Docker image.&#10;Run the Docker container, setting environment variables to provide non-interactive inputs.&#10;Run the game inside the container.&#10;Perform end-to-end tests.&#10;Finalize by stopping the container and pushing the Docker image to DockerHub.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Live.py" beforeDir="false" afterPath="$PROJECT_DIR$/Live.py" afterDir="false" />
-    </list>
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="alignment with Eddi comments2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +102,7 @@
       <workItem from="1718269198543" duration="35000" />
       <workItem from="1718269258363" duration="1288000" />
       <workItem from="1718529774309" duration="1240000" />
-      <workItem from="1718706596811" duration="19771000" />
+      <workItem from="1718706596811" duration="20491000" />
     </task>
     <task id="LOCAL-00001" summary="3rd commit from today">
       <option name="closed" value="true" />
@@ -396,7 +392,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718732562519</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="alignment with Eddi comments">
+      <option name="closed" value="true" />
+      <created>1718733610084</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1718733610084</updated>
+    </task>
+    <task id="LOCAL-00038" summary="alignment with Eddi comments2">
+      <option name="closed" value="true" />
+      <created>1718733630033</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1718733630033</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,8 +426,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix for the jenkins node" />
-    <MESSAGE value="2nd fix for the jenkins node" />
     <MESSAGE value="3rd fix for the jenkins node" />
     <MESSAGE value="4th fix for the jenkins node" />
     <MESSAGE value="Gemini fix for the jenkins node" />
@@ -439,7 +449,9 @@
     <MESSAGE value="Dockerfile:&#10;&#10;Install requests and beautifulsoup4 required by e2e.py.&#10;Use CMD to ensure Scores.txt is created if it doesn't exist and then run the Flask app.&#10;Jenkinsfile:&#10;&#10;Remove the stage for setting up the Python environment on the Jenkins agent.&#10;Use Docker for running tests by executing the test script inside the running container." />
     <MESSAGE value="With this setup, the pipeline will follow the sequence of running MainGame.py, Score.py, and finally e2e.py for the end-to-end tests. This should align with the intended game flow." />
     <MESSAGE value="With these changes, the pipeline will:&#10;&#10;Checkout the repository.&#10;Build the Docker image.&#10;Run the Docker container, setting environment variables to provide non-interactive inputs.&#10;Run the game inside the container.&#10;Perform end-to-end tests.&#10;Finalize by stopping the container and pushing the Docker image to DockerHub." />
-    <option name="LAST_COMMIT_MESSAGE" value="With these changes, the pipeline will:&#10;&#10;Checkout the repository.&#10;Build the Docker image.&#10;Run the Docker container, setting environment variables to provide non-interactive inputs.&#10;Run the game inside the container.&#10;Perform end-to-end tests.&#10;Finalize by stopping the container and pushing the Docker image to DockerHub." />
+    <MESSAGE value="alignment with Eddi comments" />
+    <MESSAGE value="alignment with Eddi comments2" />
+    <option name="LAST_COMMIT_MESSAGE" value="alignment with Eddi comments2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
