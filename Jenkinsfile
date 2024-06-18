@@ -55,18 +55,13 @@ pipeline {
 
     post {
         always {
-            node {  // Only required if using agent label
-                label 'your_agent_label'  // Replace with your actual agent label (optional)
-                script {
-                    sh "docker ps -q --filter 'ancestor=flask-scores-app' | xargs -r docker stop"
-                    sh "docker ps -a -q --filter 'ancestor=flask-scores-app' | xargs -r docker rm"
-                }
+            script {
+                sh "docker ps -q --filter 'ancestor=flask-scores-app' | xargs -r docker stop"
+                sh "docker ps -a -q --filter 'ancestor=flask-scores-app' | xargs -r docker rm"
             }
         }
         cleanup {
-            node {
-                cleanWs()
-            }
+            cleanWs()  // Clean workspace without requiring a specific agent
         }
     }
 }
