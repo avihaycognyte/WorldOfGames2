@@ -39,6 +39,17 @@ pipeline {
             }
         }
 
+        stage('Check Scores.txt') {
+            steps {
+                script {
+                    def scoresFile = "${env.WORKSPACE}/Scores.txt"
+                    if (!fileExists(scoresFile)) {
+                        sh 'echo "0" > Scores.txt'
+                    }
+                }
+            }
+        }
+
         stage('Build') {
             steps {
                 sh 'echo Building...'
@@ -50,7 +61,7 @@ pipeline {
         stage('Run') {
             steps {
                 sh 'echo Running...'
-                sh 'docker run --name flask-scores-app --detach --rm --publish 8777:5000 --volume $WORKSPACE/Scores.txt:/Scores.txt flask-scores-app'
+                sh 'docker run --name flask-scores-app --detach --rm --publish 8777:5000 --volume $WORKSPACE/Scores.txt:/Scores.txt flask-scores-app || { echo "Error running container"; docker logs flask-scores-app; exit 1; }'
                 sh 'docker ps -f "name=flask-scores-app"'
                 sleep 10 // Wait for the service to start
             }
