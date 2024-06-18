@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="Volume Mount Path: Modified the volume mount path from /Scores.txt to /app/Scores.txt in the container to ensure it does not conflict with the root directory.&#10;Debugging: Retained the debugging steps to inspect the workspace and contents of Scores.txt.&#10;Error Handling: Added error handling in the docker run command to provide more context in case of failure." />
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="Removed Mounting Scores.txt: No longer mounts Scores.txt from the host to the container.&#10;Creation of Scores.txt within the Container: Added a startup script within the docker run command to ensure Scores.txt exists and is initialized within the container.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +105,7 @@
       <workItem from="1718269198543" duration="35000" />
       <workItem from="1718269258363" duration="1288000" />
       <workItem from="1718529774309" duration="1240000" />
-      <workItem from="1718706596811" duration="14967000" />
+      <workItem from="1718706596811" duration="15668000" />
     </task>
     <task id="LOCAL-00001" summary="3rd commit from today">
       <option name="closed" value="true" />
@@ -344,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718726900868</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Removed Mounting Scores.txt: No longer mounts Scores.txt from the host to the container.&#10;Creation of Scores.txt within the Container: Added a startup script within the docker run command to ensure Scores.txt exists and is initialized within the container.">
+      <option name="closed" value="true" />
+      <created>1718727224035</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1718727224035</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +373,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changes for the jenkins file in order to meet Eddi's guidelines." />
     <MESSAGE value="the alignemtn for the main branch" />
     <MESSAGE value="changes before HO testing!" />
     <MESSAGE value="changes befeor HO testing" />
@@ -387,7 +397,8 @@
     <MESSAGE value="Added writeFile to create Scores.txt with a value of 0 if it doesn't exist." />
     <MESSAGE value="Debug Workspace stage:&#10;&#10;Added a stage to list the files in the workspace and display the contents of Scores.txt. This will help in understanding the state of the workspace before running the container.&#10;Error Handling in Run stage:&#10;&#10;Updated the Run stage to include proper error handling and logging if the container fails to start." />
     <MESSAGE value="Volume Mount Path: Modified the volume mount path from /Scores.txt to /app/Scores.txt in the container to ensure it does not conflict with the root directory.&#10;Debugging: Retained the debugging steps to inspect the workspace and contents of Scores.txt.&#10;Error Handling: Added error handling in the docker run command to provide more context in case of failure." />
-    <option name="LAST_COMMIT_MESSAGE" value="Volume Mount Path: Modified the volume mount path from /Scores.txt to /app/Scores.txt in the container to ensure it does not conflict with the root directory.&#10;Debugging: Retained the debugging steps to inspect the workspace and contents of Scores.txt.&#10;Error Handling: Added error handling in the docker run command to provide more context in case of failure." />
+    <MESSAGE value="Removed Mounting Scores.txt: No longer mounts Scores.txt from the host to the container.&#10;Creation of Scores.txt within the Container: Added a startup script within the docker run command to ensure Scores.txt exists and is initialized within the container." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Mounting Scores.txt: No longer mounts Scores.txt from the host to the container.&#10;Creation of Scores.txt within the Container: Added a startup script within the docker run command to ensure Scores.txt exists and is initialized within the container." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
