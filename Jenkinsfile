@@ -69,45 +69,11 @@ pipeline {
             }
         }
 
-        stage('Setup Python Environment') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh '''
-                            if ! [ -x "$(command -v python3)" ]; then
-                                echo "Python3 is not installed. Installing Python3..."
-                                if [ -x "$(command -v apt-get)" ]; then
-                                    apt-get update || true
-                                    apt-get install -y python3 python3-pip || true
-                                elif [ -x "$(command -v yum)" ]; then
-                                    yum update -y
-                                    yum install -y python3 python3-pip || true
-                                else
-                                    echo "Package manager not supported. Please install Python3 manually."
-                                    exit 1
-                                fi
-                            else
-                                echo "Python3 is already installed."
-                            fi
-
-                            # Setup virtual environment
-                            python3 -m venv venv
-                            . venv/bin/activate
-                            pip install --upgrade pip
-                            pip install -r requirements.txt
-                        '''
-                    } else {
-                        echo "Python installation script is not supported on non-Unix systems."
-                    }
-                }
-            }
-        }
-
         stage('Test') {
             steps {
                 sh 'echo Testing...'
                 script {
-                    def status = sh(script: ". venv/bin/activate && python3 e2e.py http://localhost:8777", returnStatus: true)
+                    def status = sh(script: "docker exec flask-scores-app python3 e2e.py http://localhost:8777", returnStatus: true)
                     if (status != 0) {
                         error('End-to-end tests failed')
                     }

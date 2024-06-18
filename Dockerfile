@@ -13,6 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the Scores.txt file to the root directory
 COPY Scores.txt /Scores.txt
 
+# Install dependencies for the e2e.py script
+RUN pip install requests beautifulsoup4
+
 # Make port 5000 available to the world outside this container
 EXPOSE 5000
 
@@ -20,4 +23,4 @@ EXPOSE 5000
 ENV FLASK_APP=MainScores.py
 
 # Run flask on container startup
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["sh", "-c", "if [ ! -f /app/Scores.txt ]; then echo 0 > /app/Scores.txt; fi; exec flask run --host=0.0.0.0"]

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="Setup Python Environment: Ensures requests and other dependencies are installed in Jenkins before running tests.&#10;Run Stage: Starts the Docker container and ensures Scores.txt is created inside the container if it does not exist.&#10;Test Stage: Executes the end-to-end test script after ensuring dependencies are installed.">
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-    </list>
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="Setup Python Environment: Install Python3 and pip3 if they are not already installed. Create a virtual environment and install dependencies within it.&#10;Test Stage: Activate the virtual environment before running the tests" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +102,7 @@
       <workItem from="1718269198543" duration="35000" />
       <workItem from="1718269258363" duration="1288000" />
       <workItem from="1718529774309" duration="1240000" />
-      <workItem from="1718706596811" duration="16044000" />
+      <workItem from="1718706596811" duration="16653000" />
     </task>
     <task id="LOCAL-00001" summary="3rd commit from today">
       <option name="closed" value="true" />
@@ -362,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718727920078</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Setup Python Environment: Install Python3 and pip3 if they are not already installed. Create a virtual environment and install dependencies within it.&#10;Test Stage: Activate the virtual environment before running the tests">
+      <option name="closed" value="true" />
+      <created>1718728304224</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1718728304224</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +386,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changes before HO testing!" />
     <MESSAGE value="changes befeor HO testing" />
     <MESSAGE value="Resolved merge conflicts" />
     <MESSAGE value="Resolved merge conflicts on main branch" />
@@ -405,7 +410,8 @@
     <MESSAGE value="Volume Mount Path: Modified the volume mount path from /Scores.txt to /app/Scores.txt in the container to ensure it does not conflict with the root directory.&#10;Debugging: Retained the debugging steps to inspect the workspace and contents of Scores.txt.&#10;Error Handling: Added error handling in the docker run command to provide more context in case of failure." />
     <MESSAGE value="Removed Mounting Scores.txt: No longer mounts Scores.txt from the host to the container.&#10;Creation of Scores.txt within the Container: Added a startup script within the docker run command to ensure Scores.txt exists and is initialized within the container." />
     <MESSAGE value="Setup Python Environment: Ensures requests and other dependencies are installed in Jenkins before running tests.&#10;Run Stage: Starts the Docker container and ensures Scores.txt is created inside the container if it does not exist.&#10;Test Stage: Executes the end-to-end test script after ensuring dependencies are installed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup Python Environment: Ensures requests and other dependencies are installed in Jenkins before running tests.&#10;Run Stage: Starts the Docker container and ensures Scores.txt is created inside the container if it does not exist.&#10;Test Stage: Executes the end-to-end test script after ensuring dependencies are installed." />
+    <MESSAGE value="Setup Python Environment: Install Python3 and pip3 if they are not already installed. Create a virtual environment and install dependencies within it.&#10;Test Stage: Activate the virtual environment before running the tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup Python Environment: Install Python3 and pip3 if they are not already installed. Create a virtual environment and install dependencies within it.&#10;Test Stage: Activate the virtual environment before running the tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
