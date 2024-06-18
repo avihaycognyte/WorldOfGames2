@@ -35,7 +35,7 @@ pipeline {
                 script {
                     def status = sh(script: "python3 e2e.py http://localhost:8777", returnStatus: true)
                     if (status != 0) {
-                        error('End-to-end tests failed')
+                        error('End-to- end tests failed')
                     }
                 }
             }
@@ -61,7 +61,9 @@ pipeline {
             }
         }
         cleanup {
-            cleanWs()  // Clean workspace without requiring a specific agent
+            script {
+                cleanWs() // Clean workspace within the script block
+            }
         }
     }
 }
