@@ -55,7 +55,7 @@ pipeline {
 
     post {
         always {
-            node {
+            node('docker') { // Specify the label for the node
                 script {
                     sh "docker ps -q --filter 'ancestor=flask-scores-app' | xargs -r docker stop"
                     sh "docker ps -a -q --filter 'ancestor=flask-scores-app' | xargs -r docker rm"
@@ -63,7 +63,7 @@ pipeline {
             }
         }
         cleanup {
-            node {
+            node('docker') { // Specify the label for the node
                 cleanWs()
             }
         }
