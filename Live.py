@@ -1,6 +1,5 @@
 from Utils import screen_cleaner
 from Score import add_score  # Import add_score function
-import os
 
 def welcome(name):
     msg = f"""
@@ -18,12 +17,12 @@ def load_game():
         3. Currency Roulette - try and guess the value of a random amount of USD in ILS
         """
         try:
-            game = int(os.getenv('GAME_CHOICE', input(msg)))
+            game = int(input(msg))
             if game < 1 or game > 3:
                 print("Invalid choice. Please choose a valid game number.")
                 continue
 
-            diff = int(os.getenv('GAME_DIFFICULTY', input("Please choose game difficulty from 1 to 5: ")))
+            diff = int(input("Please choose game difficulty from 1 to 5: "))
             if diff < 1 or diff > 5:
                 print("Invalid difficulty level. Please choose a difficulty from 1 to 5.")
                 continue
