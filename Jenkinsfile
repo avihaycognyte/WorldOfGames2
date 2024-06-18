@@ -50,6 +50,13 @@ pipeline {
             }
         }
 
+        stage('Debug Workspace') {
+            steps {
+                sh 'ls -al $WORKSPACE'
+                sh 'cat $WORKSPACE/Scores.txt'
+            }
+        }
+
         stage('Build') {
             steps {
                 sh 'echo Building...'
@@ -61,7 +68,14 @@ pipeline {
         stage('Run') {
             steps {
                 sh 'echo Running...'
-                sh 'docker run --name flask-scores-app --detach --rm --publish 8777:5000 --volume $WORKSPACE/Scores.txt:/Scores.txt flask-scores-app || { echo "Error running container"; docker logs flask-scores-app; exit 1; }'
+                sh '''
+                    docker run --name flask-scores-app --detach --rm --publish 8777:5000 \
+                    --volume $WORKSPACE/Scores.txt:/Scores.txt flask-scores-app || {
+                        echo "Error running container";
+                        docker logs flask-scores-app;
+                        exit 1;
+                    }
+                '''
                 sh 'docker ps -f "name=flask-scores-app"'
                 sleep 10 // Wait for the service to start
             }
