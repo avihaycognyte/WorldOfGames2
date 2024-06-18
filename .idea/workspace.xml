@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="alignment with Eddi comments2" />
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="alignmet" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,24 +54,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.CurrencyRouletteGame.executor": "Run",
-    "Python.MainGame.executor": "Run",
-    "Python.MainScores.executor": "Run",
-    "Python.e2e.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/aatiya/PycharmProjects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.CurrencyRouletteGame.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MainGame.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MainScores.executor&quot;: &quot;Run&quot;,
+    &quot;Python.e2e.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aatiya/PycharmProjects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -102,7 +102,7 @@
       <workItem from="1718269198543" duration="35000" />
       <workItem from="1718269258363" duration="1288000" />
       <workItem from="1718529774309" duration="1240000" />
-      <workItem from="1718706596811" duration="20491000" />
+      <workItem from="1718706596811" duration="20840000" />
     </task>
     <task id="LOCAL-00001" summary="3rd commit from today">
       <option name="closed" value="true" />
@@ -408,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718733630033</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="alignmet">
+      <option name="closed" value="true" />
+      <created>1718734564548</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1718734564548</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="3rd fix for the jenkins node" />
     <MESSAGE value="4th fix for the jenkins node" />
     <MESSAGE value="Gemini fix for the jenkins node" />
     <MESSAGE value="Gemini 2nd fix for the jenkins node" />
@@ -451,7 +458,8 @@
     <MESSAGE value="With these changes, the pipeline will:&#10;&#10;Checkout the repository.&#10;Build the Docker image.&#10;Run the Docker container, setting environment variables to provide non-interactive inputs.&#10;Run the game inside the container.&#10;Perform end-to-end tests.&#10;Finalize by stopping the container and pushing the Docker image to DockerHub." />
     <MESSAGE value="alignment with Eddi comments" />
     <MESSAGE value="alignment with Eddi comments2" />
-    <option name="LAST_COMMIT_MESSAGE" value="alignment with Eddi comments2" />
+    <MESSAGE value="alignmet" />
+    <option name="LAST_COMMIT_MESSAGE" value="alignmet" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
