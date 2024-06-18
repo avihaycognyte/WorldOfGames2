@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'docker' // Ensure that this label matches your Jenkins node with Docker installed
+    }
 
     stages {
         stage('Checkout') {
@@ -11,10 +13,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    docker.image('docker:latest').inside {
-                        sh 'echo Building Docker image...'
-                        sh 'docker build -t flask-scores-app .'
-                    }
+                    sh 'echo Building Docker image...'
+                    sh 'docker build -t flask-scores-app .'
                 }
             }
         }
@@ -22,20 +22,18 @@ pipeline {
         stage('Run') {
             steps {
                 script {
-                    docker.image('docker:latest').inside {
-                        sh 'echo Running Docker container...'
-                        sh '''
-                            docker run --name flask-scores-app --detach --rm --publish 8777:5000 \
-                            -v $WORKSPACE/Scores.txt:/app/Scores.txt \
-                            flask-scores-app sh -c '
-                            if [ ! -f /app/Scores.txt ]; then
-                                echo 0 > /app/Scores.txt;
-                            fi;
-                            exec flask run --host=0.0.0.0'
-                        '''
-                        // Wait for the container to start
-                        sleep 10
-                    }
+                    sh 'echo Running Docker container...'
+                    sh '''
+                        docker run --name flask-scores-app --detach --rm --publish 8777:5000 \
+                        -v $WORKSPACE/Scores.txt:/app/Scores.txt \
+                        flask-scores-app sh -c '
+                        if [ ! -f /app/Scores.txt ]; then
+                            echo 0 > /app/Scores.txt;
+                        fi;
+                        exec flask run --host=0.0.0.0'
+                    '''
+                    // Wait for the container to start
+                    sleep 10
                 }
             }
         }
@@ -43,12 +41,10 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    docker.image('docker:latest').inside {
-                        sh 'echo Running end-to-end tests...'
-                        def status = sh(script: "docker exec flask-scores-app python3 e2e.py http://localhost:8777", returnStatus: true)
-                        if (status != 0) {
-                            error('End-to-end tests failed')
-                        }
+                    sh 'echo Running end-to-end tests...'
+                    def status = sh(script: "docker exec flask-scores-app python3 e2e.py http://localhost:8777", returnStatus: true)
+                    if (status != 0) {
+                        error('End-to-end tests failed')
                     }
                 }
             }
@@ -57,10 +53,8 @@ pipeline {
         stage('Finalize') {
             steps {
                 script {
-                    docker.image('docker:latest').inside {
-                        sh 'echo Finalizing...'
-                        sh 'docker stop flask-scores-app'
-                    }
+                    sh 'echo Finalizing...'
+                    sh 'docker stop flask-scores-app'
                 }
             }
         }
@@ -69,10 +63,8 @@ pipeline {
     post {
         always {
             script {
-                docker.image('docker:latest').inside {
-                    sh "docker ps -q --filter 'ancestor=flask-scores-app' | xargs -r docker stop"
-                    sh "docker ps -a -q --filter 'ancestor=flask-scores-app' | xargs -r docker rm"
-                }
+                sh "docker ps -q --filter 'ancestor=flask-scores-app' | xargs -r docker stop"
+                sh "docker ps -a -q --filter 'ancestor=flask-scores-app' | xargs -r docker rm"
             }
         }
         cleanup {
