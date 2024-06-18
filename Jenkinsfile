@@ -10,7 +10,7 @@ pipeline {
                             if ! [ -x "$(command -v docker)" ]; then
                                 echo "Docker is not installed. Installing Docker..."
                                 if [ -x "$(command -v apt-get)" ]; then
-                                    apt-get update
+                                    apt-get update || true
                                     apt-get install -y docker.io
                                 elif [ -x "$(command -v yum)" ]; then
                                     yum update -y
@@ -21,7 +21,7 @@ pipeline {
                                     echo "Package manager not supported. Please install Docker manually."
                                     exit 1
                                 fi
-                                usermod -aG docker jenkins
+                                usermod -aG docker jenkins || true
                             else
                                 echo "Docker is already installed."
                             fi
