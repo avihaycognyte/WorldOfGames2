@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent any  // Use this if you want to run on any agent
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials-id') // Replace with your DockerHub credentials ID in Jenkins
@@ -55,7 +55,8 @@ pipeline {
 
     post {
         always {
-            node {
+            node {  // Only required if using agent label
+                label 'your_agent_label'  // Replace with your actual agent label (optional)
                 script {
                     sh "docker ps -q --filter 'ancestor=flask-scores-app' | xargs -r docker stop"
                     sh "docker ps -a -q --filter 'ancestor=flask-scores-app' | xargs -r docker rm"
