@@ -1,8 +1,9 @@
-version: '3.8'
+version: '3.9'
 
 services:
   flask-scores-app:
     build: .
+    image: "avihaycognyte/flask-scores:1.1"
     ports:
       - "8777:5000"
     volumes:
