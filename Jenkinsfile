@@ -65,6 +65,24 @@ pipeline {
                         fi;
                         exec flask run --host=0.0.0.0'
                     '''
+                    // Wait for the container to start
+                    sleep 10
+                }
+            }
+        }
+
+        stage('Run Game') {
+            steps {
+                script {
+                    sh 'docker exec flask-scores-app python3 MainGame.py'
+                }
+            }
+        }
+
+        stage('Update Score') {
+            steps {
+                script {
+                    sh 'docker exec flask-scores-app python3 Score.py'
                 }
             }
         }

@@ -22,5 +22,5 @@ EXPOSE 5000
 # Define environment variable
 ENV FLASK_APP=MainScores.py
 
-# Run flask on container startup
+# Command to run on container startup
 CMD ["sh", "-c", "if [ ! -f /app/Scores.txt ]; then echo 0 > /app/Scores.txt; fi; exec flask run --host=0.0.0.0"]
