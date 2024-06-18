@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="Resolved merge conflicts on main branch">
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="Gemini 3nd fix for the jenkins node">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +104,7 @@
       <workItem from="1718269198543" duration="35000" />
       <workItem from="1718269258363" duration="1288000" />
       <workItem from="1718529774309" duration="1240000" />
-      <workItem from="1718706596811" duration="7546000" />
+      <workItem from="1718706596811" duration="10078000" />
     </task>
     <task id="LOCAL-00001" summary="3rd commit from today">
       <option name="closed" value="true" />
@@ -194,7 +194,63 @@
       <option name="project" value="LOCAL" />
       <updated>1718714290604</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix for the jenkins node">
+      <option name="closed" value="true" />
+      <created>1718720053241</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1718720053241</updated>
+    </task>
+    <task id="LOCAL-00013" summary="2nd fix for the jenkins node">
+      <option name="closed" value="true" />
+      <created>1718720313909</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1718720313909</updated>
+    </task>
+    <task id="LOCAL-00014" summary="3rd fix for the jenkins node">
+      <option name="closed" value="true" />
+      <created>1718720659253</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718720659253</updated>
+    </task>
+    <task id="LOCAL-00015" summary="4th fix for the jenkins node">
+      <option name="closed" value="true" />
+      <created>1718720833141</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1718720833141</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Gemini fix for the jenkins node">
+      <option name="closed" value="true" />
+      <created>1718721593508</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1718721593508</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Gemini 2nd fix for the jenkins node">
+      <option name="closed" value="true" />
+      <created>1718721701893</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1718721701893</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Gemini 3nd fix for the jenkins node">
+      <option name="closed" value="true" />
+      <created>1718722029935</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1718722029935</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +278,14 @@
     <MESSAGE value="changes befeor HO testing" />
     <MESSAGE value="Resolved merge conflicts" />
     <MESSAGE value="Resolved merge conflicts on main branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolved merge conflicts on main branch" />
+    <MESSAGE value="fix for the jenkins node" />
+    <MESSAGE value="2nd fix for the jenkins node" />
+    <MESSAGE value="3rd fix for the jenkins node" />
+    <MESSAGE value="4th fix for the jenkins node" />
+    <MESSAGE value="Gemini fix for the jenkins node" />
+    <MESSAGE value="Gemini 2nd fix for the jenkins node" />
+    <MESSAGE value="Gemini 3nd fix for the jenkins node" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gemini 3nd fix for the jenkins node" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
