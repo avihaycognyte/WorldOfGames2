@@ -1,9 +1,5 @@
 pipeline {
-    agent any  // Use this if you want to run on any agent
-
-    environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials-id') // Replace with your DockerHub credentials ID in Jenkins
-    }
+    agent any
 
     stages {
         stage('Checkout') {
@@ -14,41 +10,38 @@ pipeline {
 
         stage('Build') {
             steps {
-                script {
-                    docker.build('flask-scores-app', '.')
-                }
+                sh 'echo Building...'
+                sh 'docker build -t flask-scores-app .'
+                sh 'docker images flask-scores-app'
             }
         }
 
         stage('Run') {
             steps {
-                script {
-                    def flaskApp = docker.image('flask-scores-app')
-                    flaskApp.run('-p 8777:5000 -v ${WORKSPACE}/Scores.txt:/Scores.txt')
-                    sleep 10 // Wait for the service to start
-                }
+                sh 'echo Running...'
+                sh 'docker run --name flask-scores-app --detach --rm --publish 8777:5000 --volume $WORKSPACE/Scores.txt:/Scores.txt flask-scores-app'
+                sh 'docker ps -f "name=flask-scores-app"'
+                sleep 10 // Wait for the service to start
             }
         }
 
         stage('Test') {
             steps {
+                sh 'echo Testing...'
                 script {
                     def status = sh(script: "python3 e2e.py http://localhost:8777", returnStatus: true)
                     if (status != 0) {
-                        error('End-to- end tests failed')
+                        error('End-to-end tests failed')
                     }
                 }
             }
         }
 
-        stage('Push to DockerHub') {
+        stage('Clear') {
             steps {
-                script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'DOCKERHUB_CREDENTIALS') {
-                        def flaskApp = docker.image('flask-scores-app')
-                        flaskApp.push('avihaycognyte/flask-scores-app:latest')
-                    }
-                }
+                sh 'echo Clearing...'
+                sh 'docker stop flask-scores-app'
+                sh 'docker rmi flask-scores-app'
             }
         }
     }
@@ -61,9 +54,7 @@ pipeline {
             }
         }
         cleanup {
-            script {
-                cleanWs() // Clean workspace within the script block
-            }
+            cleanWs()  // Clean workspace without requiring a specific agent
         }
     }
 }
