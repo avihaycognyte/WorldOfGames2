@@ -2,6 +2,37 @@ pipeline {
     agent any
 
     stages {
+        stage('Setup Docker') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh '''
+                            if ! [ -x "$(command -v docker)" ]; then
+                                echo "Docker is not installed. Installing Docker..."
+                                if [ -x "$(command -v apt-get)" ]; then
+                                    sudo apt-get update
+                                    sudo apt-get install -y docker.io
+                                elif [ -x "$(command -v yum)" ]; then
+                                    sudo yum update -y
+                                    sudo yum install -y docker
+                                    sudo systemctl start docker
+                                    sudo systemctl enable docker
+                                else
+                                    echo "Package manager not supported. Please install Docker manually."
+                                    exit 1
+                                fi
+                                sudo usermod -aG docker $USER
+                            else
+                                echo "Docker is already installed."
+                            fi
+                        '''
+                    } else {
+                        echo "Docker installation script is not supported on non-Unix systems."
+                    }
+                }
+            }
+        }
+
         stage('Checkout') {
             steps {
                 git url: 'https://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@github.com/avihaycognyte/WorldOfGames2.git', branch: 'main'
