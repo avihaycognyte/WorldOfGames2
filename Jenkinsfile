@@ -44,7 +44,7 @@ pipeline {
                 script {
                     def scoresFile = "${env.WORKSPACE}/Scores.txt"
                     if (!fileExists(scoresFile)) {
-                        sh 'echo "0" > Scores.txt'
+                        writeFile file: 'Scores.txt', text: '0'
                     }
                 }
             }
