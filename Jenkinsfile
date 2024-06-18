@@ -1,95 +1,52 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Setup Docker') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh '''
-                            if ! [ -x "$(command -v docker)" ]; then
-                                echo "Docker is not installed. Installing Docker..."
-                                if [ -x "$(command -v apt-get)" ]; then
-                                    apt-get update || true
-                                    apt-get install -y docker.io || true
-                                elif [ -x "$(command -v yum)" ]; then
-                                    yum update -y
-                                    yum install -y docker || true
-                                    systemctl start docker || true
-                                    systemctl enable docker || true
-                                else
-                                    echo "Package manager not supported. Please install Docker manually."
-                                    exit 1
-                                fi
-                                usermod -aG docker jenkins || true
-                            else
-                                echo "Docker is already installed."
-                            fi
-                        '''
-                    } else {
-                        echo "Docker installation script is not supported on non-Unix systems."
-                    }
-                }
-            }
-        }
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('your-dockerhub-credentials-id') // Replace with your DockerHub credentials ID
+    }
 
+    stages {
         stage('Checkout') {
             steps {
                 git url: 'https://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@github.com/avihaycognyte/WorldOfGames2.git', branch: 'main'
             }
         }
 
-        stage('Debug Workspace') {
-            steps {
-                sh 'ls -al $WORKSPACE'
-                sh 'cat $WORKSPACE/Scores.txt || echo "Scores.txt not found"'
-            }
-        }
-
         stage('Build') {
             steps {
-                sh 'echo Building...'
+                sh 'echo Building Docker image...'
                 sh 'docker build -t flask-scores-app .'
-                sh 'docker images flask-scores-app'
             }
         }
 
         stage('Run') {
             steps {
-                script {
-                    sh 'echo Running...'
-                    sh '''
-                        docker run --name flask-scores-app --detach --rm --publish 8777:5000 flask-scores-app sh -c '
-                        if [ ! -f /app/Scores.txt ]; then
-                            echo 0 > /app/Scores.txt;
-                        fi;
-                        exec flask run --host=0.0.0.0'
-                    '''
-                    // Wait for the container to start
-                    sleep 10
-                }
+                sh 'echo Running Docker container...'
+                sh '''
+                    docker run --name flask-scores-app --detach --rm --publish 8777:5000 \
+                    -v $WORKSPACE/Scores.txt:/app/Scores.txt \
+                    -e GAME_CHOICE=1 -e GAME_DIFFICULTY=2 \
+                    flask-scores-app sh -c '
+                    if [ ! -f /app/Scores.txt ]; then
+                        echo 0 > /app/Scores.txt;
+                    fi;
+                    exec flask run --host=0.0.0.0'
+                '''
+                // Wait for the container to start
+                sleep 10
             }
         }
 
         stage('Run Game') {
             steps {
-                script {
-                    sh 'docker exec flask-scores-app python3 MainGame.py'
-                }
-            }
-        }
-
-        stage('Update Score') {
-            steps {
-                script {
-                    sh 'docker exec flask-scores-app python3 Score.py'
-                }
+                sh 'echo Running Game...'
+                sh 'docker exec flask-scores-app python3 MainGame.py'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'echo Testing...'
+                sh 'echo Running end-to-end tests...'
                 script {
                     def status = sh(script: "docker exec flask-scores-app python3 e2e.py http://localhost:8777", returnStatus: true)
                     if (status != 0) {
@@ -99,11 +56,13 @@ pipeline {
             }
         }
 
-        stage('Clear') {
+        stage('Finalize') {
             steps {
-                sh 'echo Clearing...'
+                sh 'echo Finalizing...'
                 sh 'docker stop flask-scores-app'
-                sh 'docker rmi flask-scores-app'
+                sh 'docker tag flask-scores-app:latest your-dockerhub-username/flask-scores-app:latest' // Replace with your DockerHub username
+                sh 'docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
+                sh 'docker push your-dockerhub-username/flask-scores-app:latest' // Replace with your DockerHub username
             }
         }
     }

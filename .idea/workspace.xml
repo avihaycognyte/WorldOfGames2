@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="Dockerfile:&#10;&#10;Install requests and beautifulsoup4 required by e2e.py.&#10;Use CMD to ensure Scores.txt is created if it doesn't exist and then run the Flask app.&#10;Jenkinsfile:&#10;&#10;Remove the stage for setting up the Python environment on the Jenkins agent.&#10;Use Docker for running tests by executing the test script inside the running container.">
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="With this setup, the pipeline will follow the sequence of running MainGame.py, Score.py, and finally e2e.py for the end-to-end tests. This should align with the intended game flow.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Live.py" beforeDir="false" afterPath="$PROJECT_DIR$/Live.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,7 @@
       <workItem from="1718269198543" duration="35000" />
       <workItem from="1718269258363" duration="1288000" />
       <workItem from="1718529774309" duration="1240000" />
-      <workItem from="1718706596811" duration="17267000" />
+      <workItem from="1718706596811" duration="18780000" />
     </task>
     <task id="LOCAL-00001" summary="3rd commit from today">
       <option name="closed" value="true" />
@@ -379,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718730011419</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="With this setup, the pipeline will follow the sequence of running MainGame.py, Score.py, and finally e2e.py for the end-to-end tests. This should align with the intended game flow.">
+      <option name="closed" value="true" />
+      <created>1718730621791</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1718730621791</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +406,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Resolved merge conflicts" />
     <MESSAGE value="Resolved merge conflicts on main branch" />
     <MESSAGE value="fix for the jenkins node" />
     <MESSAGE value="2nd fix for the jenkins node" />
@@ -422,7 +430,8 @@
     <MESSAGE value="Setup Python Environment: Ensures requests and other dependencies are installed in Jenkins before running tests.&#10;Run Stage: Starts the Docker container and ensures Scores.txt is created inside the container if it does not exist.&#10;Test Stage: Executes the end-to-end test script after ensuring dependencies are installed." />
     <MESSAGE value="Setup Python Environment: Install Python3 and pip3 if they are not already installed. Create a virtual environment and install dependencies within it.&#10;Test Stage: Activate the virtual environment before running the tests" />
     <MESSAGE value="Dockerfile:&#10;&#10;Install requests and beautifulsoup4 required by e2e.py.&#10;Use CMD to ensure Scores.txt is created if it doesn't exist and then run the Flask app.&#10;Jenkinsfile:&#10;&#10;Remove the stage for setting up the Python environment on the Jenkins agent.&#10;Use Docker for running tests by executing the test script inside the running container." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile:&#10;&#10;Install requests and beautifulsoup4 required by e2e.py.&#10;Use CMD to ensure Scores.txt is created if it doesn't exist and then run the Flask app.&#10;Jenkinsfile:&#10;&#10;Remove the stage for setting up the Python environment on the Jenkins agent.&#10;Use Docker for running tests by executing the test script inside the running container." />
+    <MESSAGE value="With this setup, the pipeline will follow the sequence of running MainGame.py, Score.py, and finally e2e.py for the end-to-end tests. This should align with the intended game flow." />
+    <option name="LAST_COMMIT_MESSAGE" value="With this setup, the pipeline will follow the sequence of running MainGame.py, Score.py, and finally e2e.py for the end-to-end tests. This should align with the intended game flow." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
