@@ -89,8 +89,13 @@ pipeline {
                             else
                                 echo "Python3 is already installed."
                             fi
+
+                            # Setup virtual environment
+                            python3 -m venv venv
+                            . venv/bin/activate
+                            pip install --upgrade pip
+                            pip install -r requirements.txt
                         '''
-                        sh 'pip3 install -r requirements.txt'
                     } else {
                         echo "Python installation script is not supported on non-Unix systems."
                     }
@@ -102,7 +107,7 @@ pipeline {
             steps {
                 sh 'echo Testing...'
                 script {
-                    def status = sh(script: "python3 e2e.py http://localhost:8777", returnStatus: true)
+                    def status = sh(script: ". venv/bin/activate && python3 e2e.py http://localhost:8777", returnStatus: true)
                     if (status != 0) {
                         error('End-to-end tests failed')
                     }
