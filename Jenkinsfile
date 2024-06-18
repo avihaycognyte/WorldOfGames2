@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'docker' // Ensure that this label matches your Jenkins node with Docker installed
-    }
+    agent any // Use any available agent
 
     stages {
         stage('Checkout') {
