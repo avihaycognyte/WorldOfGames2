@@ -24,7 +24,7 @@ def test_scores_service(url):
         return False
 
 def main():
-    url = "http://127.0.0.1:5000"  # Update this URL if different
+    url = "http://127.0.0.1:8777"  # Updated URL to match the exposed port
     if test_scores_service(url):
         print("Test passed.")
         sys.exit(0)

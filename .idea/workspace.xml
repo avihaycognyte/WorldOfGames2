@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="Resolved merge conflicts" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;avihaycognyte&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/avihaycognyte/WorldOfGames2&quot;,
+    &quot;accountId&quot;: &quot;a4267295-f8d2-46b7-8815-0238832c0d31&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2hBH5ubjMRoE6Hk5TPZuxCbJ512" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.CurrencyRouletteGame.executor": "Run",
+    "Python.MainGame.executor": "Run",
+    "Python.MainScores.executor": "Run",
+    "Python.e2e.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/aatiya/PycharmProjects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
+        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="" />
+      <created>1717060371532</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717060371532</updated>
+      <workItem from="1717060380297" duration="5567000" />
+      <workItem from="1717322468383" duration="107000" />
+      <workItem from="1717322586462" duration="5668000" />
+      <workItem from="1717397180721" duration="748000" />
+      <workItem from="1717403712387" duration="1345000" />
+      <workItem from="1717501353814" duration="7967000" />
+      <workItem from="1717587284475" duration="10319000" />
+      <workItem from="1717678528915" duration="2749000" />
+      <workItem from="1717928475658" duration="3322000" />
+      <workItem from="1718008964703" duration="2224000" />
+      <workItem from="1718261442017" duration="435000" />
+      <workItem from="1718269198543" duration="35000" />
+      <workItem from="1718269258363" duration="1288000" />
+      <workItem from="1718529774309" duration="1240000" />
+      <workItem from="1718706596811" duration="5080000" />
+    </task>
+    <task id="LOCAL-00001" summary="3rd commit from today">
+      <option name="closed" value="true" />
+      <created>1717690904101</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717690904101</updated>
+    </task>
+    <task id="LOCAL-00002" summary="3rd commit from today">
+      <option name="closed" value="true" />
+      <created>1717691070995</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717691070995</updated>
+    </task>
+    <task id="LOCAL-00003" summary="3rd commit from today">
+      <option name="closed" value="true" />
+      <created>1717691288436</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717691288436</updated>
+    </task>
+    <task id="LOCAL-00004" summary="3rd commit from today">
+      <option name="closed" value="true" />
+      <created>1717691529575</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717691529575</updated>
+    </task>
+    <task id="LOCAL-00005" summary="push for the main branch">
+      <option name="closed" value="true" />
+      <created>1717691578927</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717691578927</updated>
+    </task>
+    <task id="LOCAL-00006" summary="changes for the jenkins file in order to meet Eddi's guidelines.">
+      <option name="closed" value="true" />
+      <created>1718009658660</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718009658660</updated>
+    </task>
+    <task id="LOCAL-00007" summary="the alignemtn for the main branch">
+      <option name="closed" value="true" />
+      <created>1718009862843</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718009862843</updated>
+    </task>
+    <task id="LOCAL-00008" summary="the alignemtn for the main branch">
+      <option name="closed" value="true" />
+      <created>1718009971486</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718009971486</updated>
+    </task>
+    <task id="LOCAL-00009" summary="changes befeor HO testing">
+      <option name="closed" value="true" />
+      <created>1718710066892</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718710066892</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Resolved merge conflicts">
+      <option name="closed" value="true" />
+      <created>1718710765255</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718710765255</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1st commit" />
+    <MESSAGE value="3rd commit from today" />
+    <MESSAGE value="push for the main branch" />
+    <MESSAGE value="for the main branch alignment" />
+    <MESSAGE value="changes for the jenkins file in order to meet Eddi's guidelines." />
+    <MESSAGE value="the alignemtn for the main branch" />
+    <MESSAGE value="changes before HO testing!" />
+    <MESSAGE value="changes befeor HO testing" />
+    <MESSAGE value="Resolved merge conflicts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolved merge conflicts" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WorldOfGames2$e2e.coverage" NAME="e2e Coverage Results" MODIFIED="1717510348850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WorldOfGames2$MainScores.coverage" NAME="MainScores Coverage Results" MODIFIED="1717510053675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WorldOfGames2$MainGame.coverage" NAME="MainGame Coverage Results" MODIFIED="1717510325299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
