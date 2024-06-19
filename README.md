@@ -21,5 +21,10 @@ docker exec -it flask-scores-app sh python MainGame.py
 
 
 
-additional changes to come
+to build the jenkins:
 
+docker build -t myjenkins:1.0 .
+
+
+
+sh script.sh 
