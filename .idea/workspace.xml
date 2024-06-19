@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="changes for docker compose &amp; dockerfile">
-      <change afterPath="$PROJECT_DIR$/.idea/WorldOfGames2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="added readme , changes for the docker compose &amp; yml">
+      <change afterPath="$PROJECT_DIR$/Jenkins/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jenkins/script.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurrencyRouletteGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/CurrencyRouletteGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GuessGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/GuessGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Live.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Live.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/MainGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainScores.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/MainScores.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/MemoryGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Score.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Score.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Scores.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/e2e.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +91,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aatiya\PycharmProjects\WorldOfGames2\apps" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="WorldOfGames2" type="PythonConfigurationType" factoryName="Python">
       <module name="WorldOfGames2" />
@@ -95,7 +111,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainScores.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\aatiya\PycharmProjects\WorldOfGames2\apps\MainScores.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -136,7 +152,7 @@
       <workItem from="1718269258363" duration="1288000" />
       <workItem from="1718529774309" duration="1240000" />
       <workItem from="1718706596811" duration="23398000" />
-      <workItem from="1718781583127" duration="5424000" />
+      <workItem from="1718781583127" duration="7628000" />
     </task>
     <task id="LOCAL-00001" summary="3rd commit from today">
       <option name="closed" value="true" />
@@ -506,7 +522,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718796865066</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="added readme , changes for the docker compose &amp; yml">
+      <option name="closed" value="true" />
+      <created>1718800613046</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1718800613046</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +548,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added setup docker stage" />
     <MESSAGE value="removed su command" />
     <MESSAGE value="removed sudo command" />
     <MESSAGE value="Start Jenkins: Manually or via a script, start the Jenkins container with the Docker socket mounted using the provided command.&#10;Jenkinsfile: The Jenkinsfile includes steps to check and install Docker, and continues with the build, run, test, and clear stages." />
@@ -549,7 +572,8 @@
     <MESSAGE value="Ensure that you have a Jenkins agent with the docker label that has Docker installed.&#10;Use the sh step to execute shell commands to build, run, test, and finalize the Docker container." />
     <MESSAGE value="remove the label" />
     <MESSAGE value="changes for docker compose &amp; dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes for docker compose &amp; dockerfile" />
+    <MESSAGE value="added readme , changes for the docker compose &amp; yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added readme , changes for the docker compose &amp; yml" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

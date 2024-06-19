@@ -20,3 +20,6 @@ docker-compose up --build
 docker exec -it flask-scores-app sh python MainGame.py
 
 
+
+additional changes to come
+
