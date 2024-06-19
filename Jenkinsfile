@@ -1,7 +1,7 @@
 pipeline {
     agent {
         dockerfile {
-            filename 'jenkins/Dockerfile'
+            filename 'Dockerfile'
             dir 'jenkins'
         }
     }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     sh 'echo Building Application Docker Image...'
-                    sh 'docker build -t avihaycognyte/WorldOfGames2:1.0 app/'
+                    sh 'docker build -t avihaycognyte/WorldOfGames2:1.0 apps/'
                     sh 'docker images avihaycognyte/WorldOfGames2:1.0'
                 }
             }
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     sh 'echo Running Application...'
-                    sh 'docker run --WorldOfGames2 --detach --rm --publish 8777:8777 --env FLASK_APP=your_flask_app --env FLASK_RUN_HOST=0.0.0.0 --env FLASK_RUN_PORT=8777 avihaycognyte/WorldOfGames2:1.0'
+                    sh 'docker run --name WorldOfGames2 --detach --rm --publish 8777:8777 --env FLASK_APP=MainScores.py --env FLASK_RUN_HOST=0.0.0.0 --env FLASK_RUN_PORT=8777 avihaycognyte/WorldOfGames2:1.0'
                     sh 'docker ps -f "name=WorldOfGames2"'
                 }
             }
@@ -40,7 +40,7 @@ pipeline {
         }
         stage('Push Docker Image') {
             environment {
-                DOCKER_TOKEN = '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'
+                DOCKER_TOKEN = credentials('docker_hub_token')
             }
             steps {
                 script {

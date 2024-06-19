@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="added readme , changes for the docker compose &amp; yml">
-      <change afterPath="$PROJECT_DIR$/Jenkins/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jenkins/script.sh" afterDir="false" />
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="refactoring1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CurrencyRouletteGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/CurrencyRouletteGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GuessGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/GuessGame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Live.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Live.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/MainGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainScores.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/MainScores.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/MemoryGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Score.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Score.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Scores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/e2e.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/apps/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,15 +138,7 @@
       <workItem from="1718269258363" duration="1288000" />
       <workItem from="1718529774309" duration="1240000" />
       <workItem from="1718706596811" duration="23398000" />
-      <workItem from="1718781583127" duration="7628000" />
-    </task>
-    <task id="LOCAL-00001" summary="3rd commit from today">
-      <option name="closed" value="true" />
-      <created>1717690904101</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1717690904101</updated>
+      <workItem from="1718781583127" duration="11123000" />
     </task>
     <task id="LOCAL-00002" summary="3rd commit from today">
       <option name="closed" value="true" />
@@ -530,7 +508,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718800613046</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="refactoring">
+      <option name="closed" value="true" />
+      <created>1718809176836</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1718809176836</updated>
+    </task>
+    <task id="LOCAL-00049" summary="refactoring">
+      <option name="closed" value="true" />
+      <created>1718809248132</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1718809248132</updated>
+    </task>
+    <task id="LOCAL-00050" summary="refactoring1">
+      <option name="closed" value="true" />
+      <created>1718809460239</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1718809460239</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,8 +550,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed su command" />
-    <MESSAGE value="removed sudo command" />
     <MESSAGE value="Start Jenkins: Manually or via a script, start the Jenkins container with the Docker socket mounted using the provided command.&#10;Jenkinsfile: The Jenkinsfile includes steps to check and install Docker, and continues with the build, run, test, and clear stages." />
     <MESSAGE value="Jenkinsfile Adjustments: The Jenkinsfile includes steps to check for and install Docker with error handling for permission issues." />
     <MESSAGE value="New stage Check Scores.txt:&#10;Checks if Scores.txt exists in the workspace.&#10;If not, creates the file and initializes it with a value of 0." />
@@ -573,7 +573,9 @@
     <MESSAGE value="remove the label" />
     <MESSAGE value="changes for docker compose &amp; dockerfile" />
     <MESSAGE value="added readme , changes for the docker compose &amp; yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added readme , changes for the docker compose &amp; yml" />
+    <MESSAGE value="refactoring" />
+    <MESSAGE value="refactoring1" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
