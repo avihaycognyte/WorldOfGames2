@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="refactoring1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-    </list>
+    <list default="true" id="f2b7bb59-20f3-4ea8-8f06-5bb35e0bd074" name="Changes" comment="for the readme additional notes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,26 +54,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.CurrencyRouletteGame.executor": "Run",
-    "Python.MainGame.executor": "Run",
-    "Python.MainScores.executor": "Run",
-    "Python.e2e.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/aatiya/PycharmProjects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.CurrencyRouletteGame.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MainGame.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MainScores.executor&quot;: &quot;Run&quot;,
+    &quot;Python.e2e.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aatiya/PycharmProjects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\aatiya\PycharmProjects\WorldOfGames2\apps" />
@@ -138,23 +135,7 @@
       <workItem from="1718269258363" duration="1288000" />
       <workItem from="1718529774309" duration="1240000" />
       <workItem from="1718706596811" duration="23398000" />
-      <workItem from="1718781583127" duration="11123000" />
-    </task>
-    <task id="LOCAL-00002" summary="3rd commit from today">
-      <option name="closed" value="true" />
-      <created>1717691070995</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1717691070995</updated>
-    </task>
-    <task id="LOCAL-00003" summary="3rd commit from today">
-      <option name="closed" value="true" />
-      <created>1717691288436</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1717691288436</updated>
+      <workItem from="1718781583127" duration="11451000" />
     </task>
     <task id="LOCAL-00004" summary="3rd commit from today">
       <option name="closed" value="true" />
@@ -532,7 +513,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718809460239</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fixes for dockercopose &amp; jenkins file">
+      <option name="closed" value="true" />
+      <created>1718813263777</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1718813263777</updated>
+    </task>
+    <task id="LOCAL-00052" summary="for the readme additional notes">
+      <option name="closed" value="true" />
+      <created>1718813521823</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1718813521823</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,8 +547,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Start Jenkins: Manually or via a script, start the Jenkins container with the Docker socket mounted using the provided command.&#10;Jenkinsfile: The Jenkinsfile includes steps to check and install Docker, and continues with the build, run, test, and clear stages." />
-    <MESSAGE value="Jenkinsfile Adjustments: The Jenkinsfile includes steps to check for and install Docker with error handling for permission issues." />
     <MESSAGE value="New stage Check Scores.txt:&#10;Checks if Scores.txt exists in the workspace.&#10;If not, creates the file and initializes it with a value of 0." />
     <MESSAGE value="Added writeFile to create Scores.txt with a value of 0 if it doesn't exist." />
     <MESSAGE value="Debug Workspace stage:&#10;&#10;Added a stage to list the files in the workspace and display the contents of Scores.txt. This will help in understanding the state of the workspace before running the container.&#10;Error Handling in Run stage:&#10;&#10;Updated the Run stage to include proper error handling and logging if the container fails to start." />
@@ -575,7 +570,9 @@
     <MESSAGE value="added readme , changes for the docker compose &amp; yml" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="refactoring1" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring1" />
+    <MESSAGE value="fixes for dockercopose &amp; jenkins file" />
+    <MESSAGE value="for the readme additional notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="for the readme additional notes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WorldOfGames2$CurrencyRouletteGame.coverage" NAME="CurrencyRouletteGame Coverage Results" MODIFIED="1717325188408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

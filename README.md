@@ -21,7 +21,10 @@ docker exec -it flask-scores-app sh python MainGame.py
 
 
 
-to build the jenkins:
+4.to build the jenkins
+
+cd to Jenkins folder
+Run it using GIT BASH:
 
 docker build -t myjenkins:1.0 .
 
