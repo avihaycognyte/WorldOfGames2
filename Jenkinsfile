@@ -9,7 +9,14 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://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@github.com/avihaycognyte/WorldOfGames2.git'
+                git 'https://github.com/avihaycognyte/WorldOfGames2.git'
+            }
+        }
+        stage('Verify Dockerfile Path') {
+            steps {
+                script {
+                    sh 'ls -l jenkins/'
+                }
             }
         }
         stage('Build Application Docker Image') {
