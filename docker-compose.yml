@@ -1,15 +1,15 @@
 version: '3.9'
 
 services:
-  flask-scores-app:
+  web:
     build: .
-    image: "avihaycognyte/flask-scores:latest"
+    image: "avihaycognyte/flask-scores:1.1"
     ports:
       - "8777:8777"
-    volumes:
-      - ./Scores.txt:/Scores.txt
     environment:
       FLASK_APP: MainScores.py
       FLASK_RUN_HOST: 0.0.0.0
       FLASK_RUN_PORT: 8777
       FLASK_ENV: development
+    volumes:
+      - ./Scores.txt:/Scores.txt
